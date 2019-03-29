@@ -1,0 +1,16 @@
+body {
+  background-color: #27ff46; }
+
+p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.container {
+  margin: auto;
+  width: 1000px;
+  height: 10px; }

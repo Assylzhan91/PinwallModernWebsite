@@ -1,0 +1,16 @@
+body{
+    background-color: #27ff46;
+}
+
+p{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container{
+    margin: auto;
+    width: 1000px;
+    height: 10px;
+
+}

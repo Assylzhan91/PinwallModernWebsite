@@ -1,16 +1,54 @@
-var gulp              = require("gulp"),
-    sass              = require("gulp-sass"),
-    gulp-autoprefixer = require("gulp-autoprefixer");
-
-gulp.task('uglify', function(){
-    gulp.src('js/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('build/js'))
-});
+const gulp         = require("gulp"),
+      concat       = require("gulp-concat"),
+      sass         = require("gulp-sass"),
+      autoprefixer = require("gulp-autoprefixer"),
+      cleanCSS     = require("gulp-clean-css"),
+      browserSync  = require('browser-sync').create();
 
 
-gulp.task('concat', function() {
-    gulp.src('css/*.css')
-        .pipe(concat('one.css'))
-        .pipe(gulp.dest('build/css'))
-});
+
+const allCssFile = [
+    'node_modules/normalize.scss/normalize.scss',
+    'src/css/common.scss'
+];
+
+
+function styles() {
+
+    return gulp.src(allCssFile)
+    // .pipe(concat("all.css"))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        /* .pipe(cleanCSS({
+         level: 2
+         }))*/
+        .pipe(gulp.dest("build/css"))
+        .pipe(browserSync.stream());
+}
+
+
+function watch() {
+
+    browserSync.init({
+        server: {
+            baseDir: "./",
+            index: "index.html"
+        },
+        browser: ["chrome"]
+        // tunnel: "my-project"
+    });
+
+    gulp.watch('src/css/**/*.scss', styles);
+    gulp.watch('index.html', browserSync.reload);
+}
+
+
+
+gulp.task("styles", styles);
+gulp.task("watch", watch);
+
+
+gulp.task("default", gulp.series("styles", "watch"));
