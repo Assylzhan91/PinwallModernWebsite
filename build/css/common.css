@@ -1,16 +1,193 @@
-body {
-  background-color: #27ff46; }
+html, body {
+  padding: 0;
+  font-family: 'Open Sans', 'Lobster', sans-serif, arial;
+  font-size: 16px;
+  color: #fff;
+  min-width: 1000px; }
 
-p {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.display-flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  display: flex; }
+
+a, ul, p {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  line-height: 1.5em; }
 
 .container {
   margin: auto;
-  width: 1000px;
-  height: 10px; }
+  max-width: 1024px; }
+  .container_ps-absolute {
+    position: relative;
+    border-top: 1px solid transparent;
+    margin-top: -1px; }
+
+.block_green {
+  background-color: #31a585; }
+
+.block_light {
+  background-color: #f4f4f4; }
+
+.block_white {
+  padding-top: 45px;
+  padding-bottom: 45px; }
+
+.menu_mod {
+  background-color: #fff;
+  width: 228px;
+  padding-top: 25px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.logo {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .logo_menu_mod {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px; }
+  .logo__title {
+    font-family: 'Lobster';
+    text-align: center;
+    font-size: 36px;
+    color: #33a088;
+    line-height: 24px; }
+
+.nav-menu_mod {
+  padding-left: 45px; }
+
+.nav-menu__item {
+  margin-bottom: 20px; }
+
+.nav-menu__link {
+  color: #7e7e7e; }
+  .nav-menu__link:hover {
+    color: rgba(159, 159, 159, 0.63); }
+
+.bottom-arrow__wrap {
+  padding: 15px 0;
+  position: relative;
+  background-color: #fff;
+  width: 228px; }
+  .bottom-arrow__wrap::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 50%;
+    padding-top: 27%;
+    background: #ffffff;
+    -webkit-transform: skew(0, 20.5deg) translate(0, 50%);
+        -ms-transform: skew(0, 20.5deg) translate(0, 50%);
+            transform: skew(0, 20.5deg) translate(0, 50%); }
+  .bottom-arrow__wrap::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 50%;
+    padding-top: 27%;
+    background: #fff;
+    -webkit-transform: skew(0, -20.5deg) translate(0, 50%);
+        -ms-transform: skew(0, -20.5deg) translate(0, 50%);
+            transform: skew(0, -20.5deg) translate(0, 50%); }
+
+.social_pad250 {
+  padding-left: 250px; }
+
+.social__list {
+  margin-top: 125px;
+  padding: 0 75px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 75px; }
+
+.social__text {
+  margin: 0 50px;
+  text-align: center;
+  margin-bottom: 60px; }
+
+.social__link {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.icons__item {
+  margin-right: 60px; }
+
+.social-link__button {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  line-height: 22px; }
+  .social-link__button_feature {
+    color: #e2e2e2;
+    background-color: #1dc896;
+    border-radius: 5px;
+    text-transform: none;
+    font-size: 30px; }
+
+.social-link_feature {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.brands {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .brands_pad15 {
+    padding-top: 15px; }
+  .brands__item .cls-1 {
+    opacity: .5; }
+    .brands__item .cls-1:hover {
+      opacity: 1; }
+
+.feature__title, .feature__text {
+  color: #8d8d8d;
+  text-align: center; }
+
+.feature__title {
+  font-size: 36px;
+  margin-bottom: 50px; }
+  .feature__title_margin0 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-align: left;
+    line-height: 30px;
+    font-weight: 100; }
+
+.feature_pad55 {
+  padding: 55px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.feature__item {
+  padding: 0 40px; }
+
+.feature__text {
+  font-size: 16px;
+  margin-bottom: 45px; }
+  .feature__text_color-white {
+    color: #fff;
+    text-align: left; }

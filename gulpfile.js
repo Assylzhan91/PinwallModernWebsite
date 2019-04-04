@@ -19,8 +19,8 @@ function styles() {
     // .pipe(concat("all.css"))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+            browsers: ['ie >= 8', 'last 4 version'],
+            cascade: true
         }))
         /* .pipe(cleanCSS({
          level: 2
@@ -28,7 +28,6 @@ function styles() {
         .pipe(gulp.dest("build/css"))
         .pipe(browserSync.stream());
 }
-
 
 function watch() {
 
@@ -43,6 +42,8 @@ function watch() {
 
     gulp.watch('src/css/**/*.scss', styles);
     gulp.watch('index.html', browserSync.reload);
+
+
 }
 
 
