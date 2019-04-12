@@ -44,7 +44,8 @@ a, ul, p, fieldset {
         justify-content: space-around;
     position: relative;
     z-index: 2;
-    min-height: 250px; }
+    min-height: 250px;
+    padding-bottom: 30px; }
 
 .block_green {
   background-color: #31a585; }
@@ -66,19 +67,21 @@ a, ul, p, fieldset {
   padding: 10px 25px;
   border-radius: 5px; }
 
-.menu {
-  background-image: url("../../img/svg/nav-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .menu_mod {
-    width: 228px;
-    padding-top: 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 456px;
-    -webkit-box-shadow: 1px -37px 32px -5px black;
-            box-shadow: 1px -37px 32px -5px black; }
+.menu_mod {
+  width: 228px;
+  padding-top: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 456px; }
+
+.menu__bg {
+  position: absolute;
+  width: 230px;
+  top: 0; }
+  .menu__bg svg {
+    -webkit-filter: drop-shadow(0px -5px 6px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0px -5px 6px rgba(0, 0, 0, 0.7)); }
 
 .logo {
   -webkit-box-orient: vertical;
@@ -88,7 +91,12 @@ a, ul, p, fieldset {
   .logo_menu_mod {
     padding-bottom: 30px;
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 100; }
+  .logo__wrap {
+    width: 40px;
+    margin: auto; }
   .logo__title {
     font-family: 'Lobster';
     text-align: center;
@@ -97,7 +105,9 @@ a, ul, p, fieldset {
     line-height: 24px; }
 
 .nav-menu_mod {
-  padding-left: 45px; }
+  padding-left: 45px;
+  position: relative;
+  z-index: 100; }
 
 .nav-menu__item {
   margin-bottom: 20px; }
@@ -293,23 +303,27 @@ a, ul, p, fieldset {
   font-size: 24px;
   font-weight: 100;
   line-height: 30px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 10; }
 
 .location__text {
   font-size: 14px;
-  line-height: 24px; }
+  line-height: 24px;
+  position: relative;
+  z-index: 10; }
 
 .location__arrow {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-left: -165px;
-  margin-top: -90px; }
-  .location__arrow svg {
-    fill: red; }
-  .location__arrow .cls-1 {
-    opacity: 1;
-    fill: #fff; }
+  margin-top: -90px;
+  width: 350px; }
+  .location__arrow .bg-adress {
+    fill: red;
+    -webkit-filter: drop-shadow(3px 1px 7px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(3px 1px 7px rgba(0, 0, 0, 0.7)); }
 
 .map {
   position: absolute;

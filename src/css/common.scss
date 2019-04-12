@@ -54,6 +54,7 @@ a, ul, p, fieldset{
         position: relative;
         z-index: 2;
         min-height: 250px;
+        padding-bottom: 30px;
     }
 }
 
@@ -93,9 +94,7 @@ a, ul, p, fieldset{
 
 
 .menu{
-    background-image: url("../../img/svg/nav-bg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+
     &_mod{
         //background-color: #fff;
         width: 228px;
@@ -104,8 +103,19 @@ a, ul, p, fieldset{
         top: 0;
         left: 0;
         height: 456px;
-        box-shadow: 1px -37px 32px -5px rgba(#000,1);
+
     }
+
+    &__bg{
+        position: absolute;
+        width: 230px;
+        top: 0;
+        svg{
+            filter: drop-shadow( 0px -5px 6px rgba(#000, .7));
+
+        }
+    }
+
 }
 
 .logo{
@@ -115,10 +125,14 @@ a, ul, p, fieldset{
         padding-bottom: 30px;
         border-bottom: 1px solid #e5e5e5;
         margin-bottom: 30px;
+        position: relative;
+        z-index:100;
+
     }
 
-    &__img{
-
+    &__wrap{
+        width: 40px;
+        margin: auto;
     }
 
     &__title{
@@ -137,6 +151,8 @@ a, ul, p, fieldset{
 
     &_mod{
         padding-left: 45px;
+        position: relative;
+        z-index: 100;
     }
 
     &__item{
@@ -401,12 +417,17 @@ a, ul, p, fieldset{
         font-weight: 100;
         line-height: 30px;
         margin-bottom: 15px;
+        position: relative;
+        z-index: 10;
 
     }
 
     &__text{
+
         font-size: 14px;
         line-height: 24px;
+        position: relative;
+        z-index: 10;
     }
 
    &__arrow{
@@ -416,14 +437,13 @@ a, ul, p, fieldset{
      left: 50%;
      margin-left: -165px;
      margin-top: -90px;
+       width: 350px;
 
-      svg{
+       .bg-adress{
           fill:red;
+          filter: drop-shadow( 3px 1px 7px rgba(#000, .7));
       }
-       .cls-1{
-           opacity: 1;
-           fill: #fff;
-       }
+
    }
 }
 
