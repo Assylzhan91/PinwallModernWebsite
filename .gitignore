@@ -1,7 +1,6 @@
 .gitignore/
 node_modules/
-scss/
-gulpfile.js/
-package.json/
+./git
 package-lock.json/
+package.json/
 .idea/
